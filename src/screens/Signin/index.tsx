@@ -3,16 +3,21 @@ import {
     Text, 
     View, 
     Image, 
-    StatusBar
 } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
 
 import IlustrationImg from '../../assets/illustration.png'; 
 import { styles } from './styles';
 
 import { ButtonIcon } from '../../components/ButtonIcon'
 
-
 export function Signin() {
+    const navegation = useNavigation();
+
+    function handleSigin(){
+        navegation.navigate('Home'); 
+    }
+
   return (
     <View style={styles.container}>
         <Image 
@@ -34,6 +39,7 @@ export function Signin() {
             <ButtonIcon 
                 title='Conectar ao discord'
                 activeOpacity={0.7}
+                onPress={handleSigin}
             />
         </View>
     </View>

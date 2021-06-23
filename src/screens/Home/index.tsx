@@ -9,7 +9,6 @@ export function Home(){
         <View>
             <View style={styles.header}>
                 <Profile />
-
             </View>        
         </View>
     ); 
